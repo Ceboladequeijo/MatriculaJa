@@ -1,4 +1,5 @@
 const express = require("express")
+const morgan = require("morgan")
 const router = express.Router()
 
 router.use(logger)
@@ -43,8 +44,9 @@ router.param("id", (req, res, next, id) => {
 })
 
 function logger(req, res, next) {
-  console.log(req.originalUrl)
+  console.log(`${req.originalUrl} opan`)
   next()
 }
+
 
 module.exports = router

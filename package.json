@@ -4,8 +4,11 @@
   "description": "O projeto consiste numa aplicação Web feita para agilizar do processo de matrícula em instituições de ensino, indo desde o Fundamental até o ensino médio.",
   "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "Start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:reload": "npm run db:drop && npm run db:load",
+    "db:load": "node load.js",
+    "db:drop": "rm db.sqlite"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +16,13 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
     "jquery": "^3.7.1",
-    "jsdom": "^24.0.0"
+    "jsdom": "^24.0.0",
+    "morgan": "^1.10.0",
+    "prisma": "^5.13.0",
+    "sqlite-async": "^1.2.0",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
