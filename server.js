@@ -11,7 +11,7 @@ app.use(express.static("public"))
 app.get("/home", (req, res) => {
   res.sendFile('index.html', {root:'public/html'})
 })
-//alteracoes de teste
+//alteracoes de teste2
 app.get("/escolas", (req, res) => {
   res.sendFile('info-escola.html', {root:'public/html'})
 })
