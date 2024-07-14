@@ -1,0 +1,17 @@
+@domain=http://localhost:3000
+
+### list data
+GET {{domain}}/dados
+### create data
+POST {{domain}}/dados
+Content-Type: application/json
+
+{
+    "nome": "Nome Teste",
+    "endereço": "Endereço Teste",
+    "telefone": "Tel Teste",
+    "anos": "Anos Teste",
+    "horários": "Horários Teste",
+    "mapa": "https://Teste",
+    "foto": "Teste.png"
+  }
